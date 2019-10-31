@@ -199,6 +199,15 @@ public class MyArrayList implements MyCollection {
     }
 
     /**
+     * Pour test JUnit
+     *
+     * @return la taille totale du tableau
+     */
+    public int getListLength() {
+        return list.length;
+    }
+
+    /**
      * Trier la liste en utilisant l'algorithme de tri "insertion sort"
      */
     @Override
