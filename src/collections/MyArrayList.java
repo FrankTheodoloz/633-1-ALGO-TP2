@@ -1,8 +1,41 @@
 package collections;
 
-import java.util.List;
-
 public class MyArrayList implements MyCollection {
+
+    private static int TAB_SIZE = 10;
+    private Comparable[] list;
+    private int size;
+
+    public MyArrayList() {
+        list = new Comparable[TAB_SIZE];
+        size = 0;
+    }
+
+    /**
+     * Recopie le tableau dans un tableau 50% plus grand
+     */
+    private void resize() {
+        // creates a new list
+        Comparable[] newList = new Comparable[list.length * 150/100];
+
+        // runs over all elements and copies in new list
+        for (int i = 0; i < size; i++) {
+            newList[i] = list[i];
+            list = newList;
+        }
+    }
+
+    /**
+     * vérifie si l'index est hors limite
+     *
+     * @param index index demandé
+     * @throws IndexOutOfBoundsException lance une exception si l'indice est négatif ou supérieur à la taille de la liste
+     */
+    private void checkIndex(int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index > size - 1) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 
     /**
      * Ajoute un élément à la fin de la liste
@@ -11,7 +44,11 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void add(Comparable element) {
-
+        // checks whether the list is big enough
+        if (size >= list.length) {
+            resize();
+        }
+        list[size++] = element;
     }
 
     /**
@@ -22,8 +59,28 @@ public class MyArrayList implements MyCollection {
      * @throws IndexOutOfBoundsException lance une exception si l'indice est négatif ou supérieur à la taille de la liste
      */
     @Override
-    public void add(int index, Comparable element) {
+    public void add(int index, Comparable element) throws IndexOutOfBoundsException {
+        checkIndex(index);
+        Comparable[] newList;
 
+        // checks whether the list is big enough
+        if (size >= list.length) {
+            newList = new Comparable[list.length * 50/100];
+        } else {
+            newList = new Comparable[list.length];
+        }
+
+        for (int i = 0; i < size; i++) {
+
+            if (i < index) {
+                newList[i] = list[i];
+            } else if (index == i) {
+                newList[i] = element;
+            } else {
+                newList[i] = list[i - 1];
+            }
+        }
+        list = newList;
     }
 
     /**
@@ -34,8 +91,9 @@ public class MyArrayList implements MyCollection {
      * @throws IndexOutOfBoundsException lance une exception si l'indice est négatif ou supérieur à la taille de la liste
      */
     @Override
-    public Comparable get(int index) {
-        return null;
+    public Comparable get(int index) throws IndexOutOfBoundsException {
+        checkIndex(index);
+        return list[index];
     }
 
     /**
@@ -47,7 +105,8 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void set(int index, Comparable element) {
-
+        checkIndex(index);
+        list[index] = element;
     }
 
     /**
@@ -57,7 +116,8 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void remove(Comparable element) {
-
+        int index = indexOf(element);
+        remove(index);
     }
 
     /**
@@ -67,7 +127,13 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void remove(int index) {
-
+        // starting index, shifts elements to left
+        for (int i = index; i < size - 1; i++) {
+            list[i] = list[i + 1];
+        }
+        // clear last element in double
+        list[size - 1] = null;
+        size--;
     }
 
     /**
@@ -75,7 +141,8 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void clear() {
-
+        list = new Comparable[TAB_SIZE];
+        size = 0;
     }
 
     /**
@@ -85,7 +152,7 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     /**
@@ -95,7 +162,7 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     /**
@@ -106,6 +173,11 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public boolean contains(Comparable element) {
+        for (int i = 0; i < size; i++) {
+            if (list[i].equals(element)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -118,7 +190,12 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public int indexOf(Comparable element) {
-        return 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i].equals(element)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -126,7 +203,7 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void insertionSort() {
-
+        // TODO
     }
 
     /**
@@ -134,7 +211,7 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void fusionSort() {
-
+        // TODO
     }
 
 }
