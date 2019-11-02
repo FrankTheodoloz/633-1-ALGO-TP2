@@ -51,7 +51,14 @@ public class Headline implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        Headline other = (Headline) o;
+        int compareText = this.getHeadline().compareToIgnoreCase(other.getHeadline());
+
+        // si les titres sont identiques
+        if (compareText == 0) {
+            return this.getDate().compareTo(other.getDate());
+        }
+        return compareText;
     }
 
     @Override
