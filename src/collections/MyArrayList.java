@@ -16,13 +16,13 @@ public class MyArrayList implements MyCollection {
      */
     private void resize() {
         // creates a new list
-        Comparable[] newList = new Comparable[list.length * 150/100];
+        Comparable[] newList = new Comparable[list.length * 150 / 100];
 
         // runs over all elements and copies in new list
         for (int i = 0; i < size; i++) {
             newList[i] = list[i];
-            list = newList;
         }
+        list = newList;
     }
 
     /**
@@ -65,7 +65,7 @@ public class MyArrayList implements MyCollection {
 
         // checks whether the list is big enough
         if (size >= list.length) {
-            newList = new Comparable[list.length * 50/100];
+            newList = new Comparable[list.length * 150 / 100];
         } else {
             newList = new Comparable[list.length];
         }
