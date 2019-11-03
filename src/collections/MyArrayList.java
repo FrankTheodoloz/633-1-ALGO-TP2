@@ -203,7 +203,15 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void insertionSort() {
-        // TODO
+        for (int i = 1; i < size; i++) { // parcours du tableau depuis le 2è element
+            Comparable key = get(i); // on prend l'élément à comparer
+            int j = i - 1;  // l'indice précédent l'élément
+            while (j >= 0 && get(j).compareTo(key) > 0) { // tant que l'élément à déplacer vers la droite est plus grand que l'élément à comparer && que l'indice >= 0
+                set(j + 1, get(j)); // on déplace l'élément vers la droite
+                j--; // on passe à l'élément précédent (pour la première place j devient -1 = fin boucle)
+            }
+            set(j + 1, key); // (pour la première place j[-1] +1 = 0)
+        }
     }
 
     /**
