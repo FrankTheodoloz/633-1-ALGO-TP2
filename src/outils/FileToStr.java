@@ -26,8 +26,7 @@ public class FileToStr {
      * @throws ParseException        Lance une exception si le format du fichier n'est pas valide
      */
     public MyLinkedList loadIntoDoublyLinkedList(String filename) throws FileNotFoundException, ParseException {
-        MyLinkedList list;
-        list = new MyLinkedList();
+        MyCollection list = new MyLinkedList();
         return (MyLinkedList) scanFile(filename, list);
     }
 
@@ -42,9 +41,8 @@ public class FileToStr {
      * @throws IllegalArgumentException Si le nombre de lignes n'est pas supérieur à 0
      */
     public MyLinkedList loadIntoDoublyLinkedList(String filename, int number_lines) throws FileNotFoundException, ParseException, IllegalArgumentException {
-        MyLinkedList list;
         checkNumberLines(number_lines);
-        list = new MyLinkedList();
+        MyCollection list = new MyLinkedList();
         return (MyLinkedList) scanFile(filename, list, number_lines);
     }
 
@@ -57,8 +55,7 @@ public class FileToStr {
      * @throws ParseException        Lance une exception si le format du fichier n'est pas valide
      */
     public MyArrayList loadIntoArrayList(String filename) throws FileNotFoundException, ParseException {
-        MyArrayList list;
-        list = new MyArrayList();
+        MyCollection list = new MyArrayList();
         return (MyArrayList) scanFile(filename, list);
     }
 
@@ -74,9 +71,8 @@ public class FileToStr {
      * @throws IllegalArgumentException Si le nombre de lignes n'est pas supérieur à 0
      */
     public MyArrayList loadIntoArrayList(String filename, int number_lines) throws FileNotFoundException, ParseException, NoSuchElementException, IllegalArgumentException {
-        MyArrayList list;
         checkNumberLines(number_lines);
-        list = new MyArrayList();
+        MyCollection list = new MyArrayList();
         return (MyArrayList) scanFile(filename, list, number_lines);
     }
 
