@@ -281,7 +281,47 @@ public class MyLinkedList implements MyCollection {
      */
     @Override
     public void fusionSort() {
-        // TODO
+
+        triFusion(this, 0, size() - 1);
+
+    }
+
+    private void triFusion(MyLinkedList list, int premier, int dernier) {
+        if (premier < dernier) { // il n'y a plus qu'un seul élément
+            int milieu = premier + (dernier - premier) / 2; // on cherche le milieu du tableau (division entière ex: 7/2 = 3)
+            triFusion(list, premier, milieu); // on subdivise (récursion) le tableau depuis le premier élément jusqu'au milieu (ex: de 1 à 3)
+            triFusion(list, milieu + 1, dernier); // on subdivise (récursion) le tableau depuis le premier élément  de la deuxième partie jusqu'à la fin(ex: de [3+1]=4 à 7)
+            fusionner(list, premier, milieu, dernier); // on fusionne les tableaux lorsque les récursions sont terminées
+        }
+    }
+
+    private void fusionner(MyLinkedList list, int premier, int milieu, int dernier) {
+
+        // l'indice du début de la deuxième partie du tableau
+        int premier2 = milieu + 1;
+
+        // traitement de l'indice du milieu
+//        if (list.get(milieu).compareTo(list.get(premier2)) <= 0) {
+//            return;
+//        }
+
+        while (premier <= milieu && premier2 <= dernier) {
+
+            // si le premier élément est déjà classé
+            if (list.get(premier).compareTo(list.get(premier2)) <= 0) {
+                premier++;
+            } else {
+                // sinon classement de l'élément premier2 avant le premier
+                list.add(premier, list.get(premier2));
+                list.remove(premier2);
+
+                // mise à jour des index
+                premier++;
+                milieu++;
+                premier2++;
+            }
+        }
+
     }
 
 }
