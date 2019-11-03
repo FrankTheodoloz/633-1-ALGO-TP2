@@ -140,8 +140,8 @@ public class MyLinkedList implements MyCollection {
     @Override
     public void remove(Comparable element) {
 
-        size--; // decrement size to know if the list will be empty
-        if (size == 0) {
+        // decrement size to know if the list will be empty
+        if (size - 1 == 0) {
             firstElement = lastElement = null; // list is empty
         } else if (element.equals(firstElement.element)) {
             firstElement = firstElement.nextElement;
@@ -162,7 +162,7 @@ public class MyLinkedList implements MyCollection {
                 e = e.nextElement;
             }
         }
-
+        size--;
     }
 
     /**
@@ -172,10 +172,12 @@ public class MyLinkedList implements MyCollection {
      */
     @Override
     public void remove(int index) {
-        if (index == 0) {
+        if (size - 1 == 0) {
+            firstElement = lastElement = null; // list is empty
+        } else if (index == 0) { // first element
             firstElement = firstElement.nextElement;
             firstElement.previousElement = null;
-        } else if (index == size - 1) {
+        } else if (index == size - 1) { // last element
             lastElement = lastElement.previousElement;
             lastElement.nextElement = null;
         } else {
