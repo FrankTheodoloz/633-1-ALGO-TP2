@@ -12,16 +12,16 @@ public class Main {
 
     // paramètre pour afficher le résultat
     private static boolean printResults = false;
-    private static int nombre_lignes = 16; // nombre d'éléments; -1 pour tout
+    private static int nombre_lignes = 2000; // nombre d'éléments; -1 pour tout
 
     public static void main(String[] args) {
 
         try {
 
-            useMyArrayList("insertion", "irishtimes-date-text.csv", nombre_lignes); // 370 ms pour 2000 éléments
-            useMyLinkedList("insertion", "irishtimes-date-text.csv", nombre_lignes); // 13731ms pour 2000 éléments
-//            useMyArrayList("fusion", "irishtimes-date-text.csv", nombre_lignes); // IndexOutOfBoundsException
-//            useMyLinkedList("fusion", "irishtimes-date-text.csv", nombre_lignes); // Doubles
+            useMyArrayList("insertion", "irishtimes-date-text.csv", nombre_lignes); //    370 ms pour 2000 éléments
+            useMyLinkedList("insertion", "irishtimes-date-text.csv", nombre_lignes); // 24295 ms pour 2000 éléments
+            useMyArrayList("fusion", "irishtimes-date-text.csv", nombre_lignes); //       501 ms pour 2000 éléments, 2133 ms pour 5000,  5052 ms pour 10000
+            useMyLinkedList("fusion", "irishtimes-date-text.csv", nombre_lignes); //      260 ms pour 2000 éléments, 2010 ms pour 5000, 10141 ms pour 10000
 
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Erreur : l'index de recherche est hors limite (voir pile d'execution) :");

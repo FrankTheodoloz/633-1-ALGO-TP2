@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613a76b7-667a-402b-b9ce-ab5cd6a201e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/outils/.idea/outils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collections/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/collections/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,118 +23,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/collections/MyLinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-              <folding>
-                <element signature="class#Element#0;class#MyLinkedList#0" />
-                <element signature="method#Element#0;class#Element#0;class#MyLinkedList#0" />
-                <element signature="method#MyLinkedList#0;class#MyLinkedList#0" />
-                <element signature="docComment;method#checkIndex#0;class#MyLinkedList#0" />
-                <element signature="e#969#1031#1" />
-                <element signature="docComment;method#add#0;class#MyLinkedList#0" />
-                <element signature="method#add#0;class#MyLinkedList#0" />
-                <element signature="e#1482#1533#1" />
-                <element signature="e#1539#1674#1" />
-                <element signature="docComment;method#add#1;class#MyLinkedList#0" />
-                <element signature="method#add#1;class#MyLinkedList#0" />
-                <element signature="e#2363#2426#1" />
-                <element signature="docComment;method#get#0;class#MyLinkedList#0" />
-                <element signature="method#get#0;class#MyLinkedList#0" />
-                <element signature="e#3147#3303#1" />
-                <element signature="e#3243#3293#1" />
-                <element signature="e#3309#3469#1" />
-                <element signature="e#3405#3459#1" />
-                <element signature="e#3497#3524#0" />
-                <element signature="docComment;method#set#0;class#MyLinkedList#0" />
-                <element signature="method#set#0;class#MyLinkedList#0" />
-                <element signature="e#4682#4830#1" />
-                <element signature="e#4737#4789#1" />
-                <element signature="docComment;method#remove#0;class#MyLinkedList#0" />
-                <element signature="method#remove#0;class#MyLinkedList#0" />
-                <element signature="e#5053#5166#1" />
-                <element signature="e#5213#5323#1" />
-                <element signature="e#5329#5795#1" />
-                <element signature="e#5441#5785#1" />
-                <element signature="e#5490#5736#1" />
-                <element signature="docComment;method#remove#1;class#MyLinkedList#0" />
-                <element signature="method#remove#1;class#MyLinkedList#0" />
-                <element signature="e#5996#6060#1" />
-                <element signature="e#6089#6199#1" />
-                <element signature="e#6205#6742#1" />
-                <element signature="e#6374#6732#1" />
-                <element signature="e#6437#6683#1" />
-                <element signature="docComment;method#clear#0;class#MyLinkedList#0" />
-                <element signature="method#clear#0;class#MyLinkedList#0" />
-                <element signature="docComment;method#size#0;class#MyLinkedList#0" />
-                <element signature="docComment;method#isEmpty#0;class#MyLinkedList#0" />
-                <element signature="docComment;method#contains#0;class#MyLinkedList#0" />
-                <element signature="method#contains#0;class#MyLinkedList#0" />
-                <element signature="e#7565#7695#1" />
-                <element signature="e#7610#7654#1" />
-                <element signature="docComment;method#indexOf#0;class#MyLinkedList#0" />
-                <element signature="method#indexOf#0;class#MyLinkedList#0" />
-                <element signature="e#8174#8326#1" />
-                <element signature="e#8219#8264#1" />
-                <element signature="docComment;method#insertionSort#0;class#MyLinkedList#0" />
-                <element signature="method#insertionSort#0;class#MyLinkedList#0" />
-                <element signature="docComment;method#fusionSort#0;class#MyLinkedList#0" />
-                <element signature="method#fusionSort#0;class#MyLinkedList#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/domaine/Headline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/outils/FileToStr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/collections/MyArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
-              <folding>
-                <element signature="method#MyArrayList#0;class#MyArrayList#0" />
-                <element signature="docComment;method#checkIndex#0;class#MyArrayList#0" />
-                <element signature="docComment;method#add#0;class#MyArrayList#0" />
-                <element signature="docComment;method#add#1;class#MyArrayList#0" />
-                <element signature="docComment;method#get#0;class#MyArrayList#0" />
-                <element signature="docComment;method#set#0;class#MyArrayList#0" />
-                <element signature="docComment;method#remove#0;class#MyArrayList#0" />
-                <element signature="docComment;method#remove#1;class#MyArrayList#0" />
-                <element signature="docComment;method#clear#0;class#MyArrayList#0" />
-                <element signature="docComment;method#size#0;class#MyArrayList#0" />
-                <element signature="docComment;method#isEmpty#0;class#MyArrayList#0" />
-                <element signature="docComment;method#contains#0;class#MyArrayList#0" />
-                <element signature="docComment;method#indexOf#0;class#MyArrayList#0" />
-                <element signature="docComment;method#insertionSort#0;class#MyArrayList#0" />
-                <element signature="docComment;method#fusionSort#0;class#MyArrayList#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+            <state relative-caret-position="97">
+              <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +48,11 @@
     <findStrings>
       <find>Objects</find>
       <find>Arrays</find>
+      <find>LocalDate</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Date</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,12 +67,17 @@
         <option value="$PROJECT_DIR$/src/collections/toName.java" />
         <option value="$PROJECT_DIR$/src/collections/ArrayList.java" />
         <option value="$PROJECT_DIR$/src/collections/DoublyLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/collections/MyCollection.java" />
-        <option value="$PROJECT_DIR$/src/outils/FileToStr.java" />
+        <option value="$PROJECT_DIR$/test/TestMyArrayList.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/irishtimes-date-text_1000.csv" />
         <option value="$PROJECT_DIR$/src/domaine/Headline.java" />
+        <option value="$PROJECT_DIR$/../_tp2-FrankTheodoloz/src/collections/MyLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/outils/FileToStr.java" />
+        <option value="$PROJECT_DIR$/src/collections/MyCollection.java" />
+        <option value="$PROJECT_DIR$/src/collections/MyList.java" />
         <option value="$PROJECT_DIR$/src/collections/MyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/collections/MyArrayList.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -191,7 +92,7 @@
     <scope name="Unnamed" pattern="src:collections..*||src:domaine..*||src:outils..*" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -201,7 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,6 +136,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Course" />
       <pane id="AndroidView" />
@@ -245,22 +146,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../_tp2-FrankTheodoloz" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../_tp2-FrankTheodoloz/src/collections/MyLinkedList.java" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../_tp2-FrankTheodoloz/src/collections/MyLinkedList.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Temp\TP-2" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frank\Documents\SourceCode\_GitHub\_AnalyseAlgorithmique\tp2-FrankTheodoloz" />
       <recent name="C:\Users\Frank\Documents\SourceCode\_GitHub\_AnalyseAlgorithmique\tp2-FrankTheodoloz\src\outils" />
       <recent name="C:\Users\Frank\Documents\SourceCode\_GitHub\_AnalyseAlgorithmique\tp2-FrankTheodoloz\src\domaine" />
       <recent name="C:\Users\Frank\Documents\SourceCode\_GitHub\_AnalyseAlgorithmique\tp2-FrankTheodoloz\src\collections" />
       <recent name="C:\Temp\TP-2" />
-      <recent name="C:\Temp\TP-2\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -314,17 +217,68 @@
       <workItem from="1571506244824" duration="2674000" />
       <workItem from="1572420384509" duration="4105000" />
       <workItem from="1572542501695" duration="1892000" />
+      <workItem from="1572783194969" duration="15719000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestMyLinkedList - 2019.10.31 at 23h 05m 35s.xml">
+      <configuration name="TestMyLinkedList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMyArrayList - 2019.10.31 at 23h 05m 41s.xml">
+      <configuration name="TestMyArrayList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMyArrayList_test_resize - 2019.10.31 at 23h 06m 01s.xml">
+      <configuration name="TestMyArrayList.test_resize" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMyArrayList - 2019.10.31 at 23h 06m 10s.xml">
+      <configuration name="TestMyArrayList" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85707000" />
+    <option name="totallyTimeSpent" value="151927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49562362" visible="true" weight="0.17697228" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6059259" visible="true" weight="0.12100213" />
+      <window_info id="Structure" order="1" sideWeight="0.39407408" side_tool="true" weight="0.24507658" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31960997" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33694476" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32827735" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.4182015" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Extract Method" order="14" weight="0.5915493" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="PlantUML" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Database" order="11" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49562362" visible="true" weight="0.12260128" />
       <window_info id="Structure" order="1" sideWeight="0.50437635" side_tool="true" weight="0.30087528" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -357,7 +311,7 @@
       <window_info anchor="right" id="Capture Analysis" order="9" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info anchor="right" id="Database" order="11" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -401,6 +355,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/collections/MyArrayList.java</url>
+          <line>241</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/tp2_FrankTheodoloz$TestMyLinkedList.ic" NAME="TestMyLinkedList Coverage Results" MODIFIED="1572558739608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -508,7 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/irishtimes-date-text.csv" />
     <entry file="uml://JAVA/domaine">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -532,13 +500,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javadoc/index.html">
+    <entry file="file:////Nas/esig/ALO/Swissair/Swissair.iml">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Dummy.java" />
+    <entry file="file://$PROJECT_DIR$/test/TestMyArrayList.java" />
+    <entry file="file://$PROJECT_DIR$/test/TestMyLinkedList.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/IllegalArgumentException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1871" column="18" selection-start-line="1871" selection-start-column="18" selection-end-line="1871" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javadoc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/irishtimes-date-text.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/irishtimes-date-text_1000.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="2000" selection-start-line="2000" selection-end-line="2000" />
+          <folding>
+            <element signature="e#77969#77970#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.5/lib/src.zip!/java.base/java/lang/NullPointerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#1414#1415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/collections/MyList.java" />
+    <entry file="file://$PROJECT_DIR$/src/domaine/Headline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding>
+            <element signature="method#Headline#0;class#Headline#0" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="method#equals#0;class#Headline#0" />
+            <element signature="method#toString#0;class#Headline#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/MyCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        <state relative-caret-position="239">
+          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
           <folding>
             <element signature="docComment;class#MyCollection#0" />
             <element signature="docComment;method#add#0;class#MyCollection#0" />
@@ -558,69 +616,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:////Nas/esig/ALO/Swissair/Swissair.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domaine/Headline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/outils/FileToStr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        <state relative-caret-position="99">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="48" />
+          <folding>
+            <element signature="docComment;method#loadIntoDoublyLinkedList#0;class#FileToStr#0" />
+            <element signature="method#loadIntoDoublyLinkedList#0;class#FileToStr#0" />
+            <element signature="docComment;method#loadIntoDoublyLinkedList#1;class#FileToStr#0" />
+            <element signature="method#loadIntoDoublyLinkedList#1;class#FileToStr#0" />
+            <element signature="docComment;method#loadIntoArrayList#0;class#FileToStr#0" />
+            <element signature="docComment;method#loadIntoArrayList#1;class#FileToStr#0" />
+            <element signature="method#loadIntoArrayList#1;class#FileToStr#0" />
+            <element signature="docComment;method#scanFile#0;class#FileToStr#0" />
+            <element signature="method#scanFile#0;class#FileToStr#0" />
+            <element signature="docComment;method#scanFile#1;class#FileToStr#0" />
+            <element signature="method#scanFile#1;class#FileToStr#0" />
+            <element signature="docComment;method#scanLine#0;class#FileToStr#0" />
+            <element signature="method#scanLine#0;class#FileToStr#0" />
+            <element signature="docComment;method#checkNumberLines#0;class#FileToStr#0" />
+            <element signature="method#checkNumberLines#0;class#FileToStr#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/MyArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+        <state relative-caret-position="-1388">
+          <caret line="62" column="15" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="15" />
           <folding>
-            <element signature="method#MyArrayList#0;class#MyArrayList#0" />
+            <element signature="docComment;method#resize#0;class#MyArrayList#0" />
+            <element signature="method#resize#0;class#MyArrayList#0" />
+            <element signature="e#559#604#1" />
             <element signature="docComment;method#checkIndex#0;class#MyArrayList#0" />
             <element signature="docComment;method#add#0;class#MyArrayList#0" />
+            <element signature="method#add#0;class#MyArrayList#0" />
+            <element signature="e#1291#1324#1" />
             <element signature="docComment;method#add#1;class#MyArrayList#0" />
             <element signature="docComment;method#get#0;class#MyArrayList#0" />
             <element signature="docComment;method#set#0;class#MyArrayList#0" />
+            <element signature="method#set#0;class#MyArrayList#0" />
             <element signature="docComment;method#remove#0;class#MyArrayList#0" />
+            <element signature="method#remove#0;class#MyArrayList#0" />
             <element signature="docComment;method#remove#1;class#MyArrayList#0" />
             <element signature="docComment;method#clear#0;class#MyArrayList#0" />
+            <element signature="method#clear#0;class#MyArrayList#0" />
             <element signature="docComment;method#size#0;class#MyArrayList#0" />
+            <element signature="e#4058#4059#0" expanded="true" />
+            <element signature="e#4085#4086#0" expanded="true" />
             <element signature="docComment;method#isEmpty#0;class#MyArrayList#0" />
             <element signature="docComment;method#contains#0;class#MyArrayList#0" />
+            <element signature="method#contains#0;class#MyArrayList#0" />
+            <element signature="e#4549#4646#1" />
+            <element signature="e#4592#4636#1" />
             <element signature="docComment;method#indexOf#0;class#MyArrayList#0" />
-            <element signature="docComment;method#insertionSort#0;class#MyArrayList#0" />
-            <element signature="docComment;method#fusionSort#0;class#MyArrayList#0" />
+            <element signature="method#indexOf#0;class#MyArrayList#0" />
+            <element signature="e#5080#5174#1" />
+            <element signature="e#5123#5164#1" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Dummy.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/irishtimes-date-text_1000.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/MyLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="324">
+          <caret line="318" column="40" selection-start-line="316" selection-start-column="16" selection-end-line="318" selection-end-column="40" />
           <folding>
             <element signature="class#Element#0;class#MyLinkedList#0" />
             <element signature="method#Element#0;class#Element#0;class#MyLinkedList#0" />
             <element signature="method#MyLinkedList#0;class#MyLinkedList#0" />
             <element signature="docComment;method#checkIndex#0;class#MyLinkedList#0" />
+            <element signature="method#checkIndex#0;class#MyLinkedList#0" />
             <element signature="e#969#1031#1" />
             <element signature="docComment;method#add#0;class#MyLinkedList#0" />
             <element signature="method#add#0;class#MyLinkedList#0" />
@@ -628,48 +694,46 @@
             <element signature="e#1539#1674#1" />
             <element signature="docComment;method#add#1;class#MyLinkedList#0" />
             <element signature="method#add#1;class#MyLinkedList#0" />
-            <element signature="e#2363#2426#1" />
+            <element signature="e#2435#2465#1" />
+            <element signature="e#2491#2582#1" />
             <element signature="docComment;method#get#0;class#MyLinkedList#0" />
             <element signature="method#get#0;class#MyLinkedList#0" />
-            <element signature="e#3147#3303#1" />
-            <element signature="e#3243#3293#1" />
-            <element signature="e#3309#3469#1" />
-            <element signature="e#3405#3459#1" />
-            <element signature="e#3497#3524#0" />
-            <element signature="docComment;method#set#0;class#MyLinkedList#0" />
+            <element signature="docComment;method#getElement#0;class#MyLinkedList#0" />
+            <element signature="e#4252#4527#0" />
             <element signature="method#set#0;class#MyLinkedList#0" />
-            <element signature="e#4682#4830#1" />
-            <element signature="e#4737#4789#1" />
             <element signature="docComment;method#remove#0;class#MyLinkedList#0" />
-            <element signature="method#remove#0;class#MyLinkedList#0" />
-            <element signature="e#5053#5166#1" />
             <element signature="e#5213#5323#1" />
             <element signature="e#5329#5795#1" />
             <element signature="e#5441#5785#1" />
             <element signature="e#5490#5736#1" />
-            <element signature="docComment;method#remove#1;class#MyLinkedList#0" />
-            <element signature="method#remove#1;class#MyLinkedList#0" />
-            <element signature="e#5996#6060#1" />
-            <element signature="e#6089#6199#1" />
-            <element signature="e#6205#6742#1" />
-            <element signature="e#6374#6732#1" />
-            <element signature="e#6437#6683#1" />
+            <element signature="e#5263#5361#0" />
             <element signature="docComment;method#clear#0;class#MyLinkedList#0" />
             <element signature="method#clear#0;class#MyLinkedList#0" />
             <element signature="docComment;method#size#0;class#MyLinkedList#0" />
             <element signature="docComment;method#isEmpty#0;class#MyLinkedList#0" />
             <element signature="docComment;method#contains#0;class#MyLinkedList#0" />
             <element signature="method#contains#0;class#MyLinkedList#0" />
-            <element signature="e#7565#7695#1" />
-            <element signature="e#7610#7654#1" />
+            <element signature="e#6954#7084#1" />
+            <element signature="e#6999#7043#1" />
             <element signature="docComment;method#indexOf#0;class#MyLinkedList#0" />
             <element signature="method#indexOf#0;class#MyLinkedList#0" />
-            <element signature="e#8174#8326#1" />
-            <element signature="e#8219#8264#1" />
+            <element signature="e#7563#7715#1" />
+            <element signature="e#7608#7653#1" />
             <element signature="docComment;method#insertionSort#0;class#MyLinkedList#0" />
             <element signature="method#insertionSort#0;class#MyLinkedList#0" />
+            <element signature="e#7918#8535#1" />
+            <element signature="e#8150#8455#1" />
             <element signature="docComment;method#fusionSort#0;class#MyLinkedList#0" />
-            <element signature="method#fusionSort#0;class#MyLinkedList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -691,7 +755,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -750,6 +814,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>hamcrest-core-1.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
