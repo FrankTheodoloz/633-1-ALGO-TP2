@@ -16,13 +16,13 @@ public class MyArrayList implements MyCollection {
      */
     private void resize() {
         // creates a new list
-        Comparable[] newList = new Comparable[list.length * 150/100];
+        Comparable[] newList = new Comparable[list.length * 150 / 100];
 
         // runs over all elements and copies in new list
         for (int i = 0; i < size; i++) {
             newList[i] = list[i];
-            list = newList;
         }
+        list = newList;
     }
 
     /**
@@ -65,7 +65,7 @@ public class MyArrayList implements MyCollection {
 
         // checks whether the list is big enough
         if (size >= list.length) {
-            newList = new Comparable[list.length * 50/100];
+            newList = new Comparable[list.length * 150 / 100];
         } else {
             newList = new Comparable[list.length];
         }
@@ -212,7 +212,15 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void insertionSort() {
-        // TODO
+        for (int i = 1; i < size; i++) { // parcours du tableau depuis le 2è element
+            Comparable key = get(i); // on prend l'élément à comparer
+            int j = i - 1;  // l'indice précédent l'élément
+            while (j >= 0 && get(j).compareTo(key) > 0) { // tant que l'élément à déplacer vers la droite est plus grand que l'élément à comparer && que l'indice >= 0
+                set(j + 1, get(j)); // on déplace l'élément vers la droite
+                j--; // on passe à l'élément précédent (pour la première place j devient -1 = fin boucle)
+            }
+            set(j + 1, key); // (pour la première place j[-1] +1 = 0)
+        }
     }
 
     /**
@@ -220,7 +228,47 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void fusionSort() {
-        // TODO
+
+        triFusion(this, 0, size() - 1);
+
+    }
+
+    private void triFusion(MyArrayList list, int premier, int dernier) {
+        if (premier < dernier) { // il n'y a plus qu'un seul élément
+            int milieu = premier + (dernier - premier) / 2; // on cherche le milieu du tableau (division entière ex: 7/2 = 3)
+            triFusion(list, premier, milieu); // on subdivise (récursion) le tableau depuis le premier élément jusqu'au milieu (ex: de 1 à 3)
+            triFusion(list, milieu + 1, dernier); // on subdivise (récursion) le tableau depuis le premier élément  de la deuxième partie jusqu'à la fin(ex: de [3+1]=4 à 7)
+            fusionner(list, premier, milieu, dernier); // on fusionne les tableaux lorsque les récursions sont terminées
+        }
+    }
+
+    private void fusionner(MyArrayList list, int premier, int milieu, int dernier) {
+
+        // l'indice du début de la deuxième partie du tableau
+        int premier2 = milieu + 1;
+
+        // traitement de l'indice du milieu
+//        if (list.get(milieu).compareTo(list.get(premier2)) <= 0) {
+//            return;
+//        }
+
+        while (premier <= milieu && premier2 <= dernier) {
+
+            // si le premier élément est déjà classé
+            if (list.get(premier).compareTo(list.get(premier2)) <= 0) {
+                premier++;
+            } else {
+                // sinon classement de l'élément premier2 avant le premier
+                list.add(premier, list.get(premier2));
+                list.remove(premier2);
+
+                // mise à jour des index
+                premier++;
+                milieu++;
+                premier2++;
+            }
+        }
+
     }
 
 }
