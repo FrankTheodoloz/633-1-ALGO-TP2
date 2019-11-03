@@ -64,22 +64,19 @@ public class MyLinkedList implements MyCollection {
     @Override
     public void add(int index, Comparable element) throws IndexOutOfBoundsException {
         checkIndex(index);
-        int count = 0;
-        Element e = firstElement;
+        Element afterElement = getElement(index); // element after the newElement inserted
         Element newElement = new Element(null, element, null);
 
-        // runs over all elements and count them until it matches the index
-        while (e != null && count != index) {
-            e = e.nextElement;
-            count++;
-        }
-        //update with previous element
-        e.previousElement.nextElement = newElement; // 1
-        newElement.previousElement = e.previousElement; // 2
+        newElement.nextElement = afterElement;
+        newElement.previousElement = afterElement.previousElement;
 
-        // update with next element
-        e.previousElement = newElement; // 3
-        newElement.nextElement = e; // 4
+        if (afterElement.previousElement == null) {
+            firstElement = newElement;
+        } else {
+            afterElement.previousElement.nextElement = newElement;
+        }
+        afterElement.previousElement = newElement;
+
         size++;
     }
 
@@ -92,6 +89,17 @@ public class MyLinkedList implements MyCollection {
      */
     @Override
     public Comparable get(int index) throws IndexOutOfBoundsException {
+        return getElement(index).element;
+    }
+
+    /**
+     * Obtenir un élément Element
+     *
+     * @param index indice de l'élément à récupérer
+     * @return l'élément voulu
+     * @throws IndexOutOfBoundsException lance une exception si l'indice est négatif ou supérieur à la taille de la liste
+     */
+    private Element getElement(int index) throws IndexOutOfBoundsException {
         checkIndex(index);
         Element e;
 
@@ -108,30 +116,7 @@ public class MyLinkedList implements MyCollection {
                 e = e.previousElement;
             }
         }
-        return e.element;
-
-//        if (index == 0) {
-//            remove(0);
-//            e = firstElement;
-//        } else if (index == size - 1) {
-//            remove(size - 1);
-//            e = lastElement;
-//        } else {
-//            // starting from 2nd element
-//            int count = 1;
-//            e = firstElement.nextElement;
-//
-//            while (e != null && count != index) {
-//                if (count == index) {
-//                    return e.element;
-//                }
-//
-//                count++;
-//                e = e.nextElement;
-//            }
-//            remove(index);
-//        }
-//        return e.element;
+        return e;
     }
 
     /**
@@ -143,17 +128,8 @@ public class MyLinkedList implements MyCollection {
      */
     @Override
     public void set(int index, Comparable element) throws IndexOutOfBoundsException {
-        checkIndex(index);
-        // starting from 1st element
-        int count = -1;
-        Element e = firstElement;
-        while (e != null && count != index) {
-            count++;
-            if (index == count) {
-                e.element = element;
-            }
-            e = e.nextElement;
-        }
+        Element e = getElement(index);
+        e.element = element;
     }
 
     /**
@@ -164,7 +140,10 @@ public class MyLinkedList implements MyCollection {
     @Override
     public void remove(Comparable element) {
 
-        if (element.equals(firstElement.element)) {
+        size--; // decrement size to know if the list will be empty
+        if (size == 0) {
+            firstElement = lastElement = null; // list is empty
+        } else if (element.equals(firstElement.element)) {
             firstElement = firstElement.nextElement;
             firstElement.previousElement = null;
         } else if (element.equals(lastElement.element)) {
@@ -183,7 +162,7 @@ public class MyLinkedList implements MyCollection {
                 e = e.nextElement;
             }
         }
-        size--;
+
     }
 
     /**
@@ -195,24 +174,18 @@ public class MyLinkedList implements MyCollection {
     public void remove(int index) {
         if (index == 0) {
             firstElement = firstElement.nextElement;
+            firstElement.previousElement = null;
         } else if (index == size - 1) {
             lastElement = lastElement.previousElement;
             lastElement.nextElement = null;
         } else {
-            // starting from 2nd element
-            int count = 1;
-            Element e = firstElement.nextElement;
+            Element e = getElement(index);
 
-            while (e != null && count != index) {
-                count++;
-                if (count == index) {
-                    //update previous element
-                    e.previousElement.nextElement = e.nextElement;
-                    // update next element
-                    e.nextElement.previousElement = e.previousElement;
-                }
-                e = e.nextElement;
-            }
+            //update previous element
+            e.previousElement.nextElement = e.nextElement;
+
+            // update next element
+            e.nextElement.previousElement = e.previousElement;
         }
         size--;
     }
@@ -254,7 +227,6 @@ public class MyLinkedList implements MyCollection {
      */
     @Override
     public boolean contains(Comparable element) {
-
         Element e = firstElement;
         while (e != null) {
             if (element.equals(e.element)) {
