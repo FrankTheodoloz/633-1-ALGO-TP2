@@ -60,6 +60,8 @@ public class MyArrayList implements MyCollection {
      */
     @Override
     public void add(int index, Comparable element) throws IndexOutOfBoundsException {
+        size++;
+
         checkIndex(index);
         Comparable[] newList;
 
@@ -72,12 +74,12 @@ public class MyArrayList implements MyCollection {
 
         for (int i = 0; i < size; i++) {
 
-            if (i < index) {
+            if (i < index) { // copy elements before the item to be added
                 newList[i] = list[i];
-            } else if (index == i) {
+            } else if (index == i) { // insert the element
                 newList[i] = element;
             } else {
-                newList[i] = list[i - 1];
+                newList[i] = list[i-1]; // copy the elements after with shift -1 on the old list
             }
         }
         list = newList;
