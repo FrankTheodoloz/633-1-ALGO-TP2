@@ -31,7 +31,8 @@ public class Dummy implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        Dummy other = (Dummy) o;
+        return this.getValue().compareTo(other.getValue());
     }
 
     @Override
