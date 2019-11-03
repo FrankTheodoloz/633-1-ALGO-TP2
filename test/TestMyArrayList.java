@@ -2,6 +2,7 @@ import collections.MyCollection;
 import collections.MyArrayList;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.instanceOf;
 
@@ -35,7 +36,8 @@ public class TestMyArrayList {
         list.add(new Dummy("2"));
 
         // Assert
-        assertEquals(2, list.size());
+        Dummy d = (Dummy) list.get(1);
+        assertEquals("2", d.getValue());
     }
 
     /**
@@ -45,17 +47,14 @@ public class TestMyArrayList {
     public void test_add_at_index() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
-        list.add(3, new Dummy("three"));
-        list.add(4, new Dummy("four"));
-        list.add(5, new Dummy("five"));
-        list.add(6, new Dummy("six"));
+        list.add(3, new Dummy("test"));
 
         // Assert
-        Dummy d1 = (Dummy) list.get(3);
-        assertEquals("three", d1.getValue());
+        Dummy d = (Dummy) list.get(3);
+        assertEquals("test", d.getValue());
     }
 
     /**
@@ -65,13 +64,16 @@ public class TestMyArrayList {
     public void test_add_index_shift() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         //Act
-        list.add(4, new Dummy("Fourth index"));
+        list.add(4, new Dummy("test"));
 
-        //Assert "5" at index 5
-        assertEquals("5", ((Dummy) list.get(5)).getValue());
+        //Assert
+        Dummy dBefore = (Dummy) list.get(3);
+        Dummy dAfter = (Dummy) list.get(5);
+        assertEquals("E index 3", dBefore.getValue());
+        assertEquals("C index 4", dAfter.getValue());
     }
 
     /**
@@ -81,10 +83,10 @@ public class TestMyArrayList {
     public void test_add_at_index_exception_high() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
-        list.add(10, new Dummy("Out of bounds"));
+        list.add(10, new Dummy("test"));
         fail("IndexOutOfBoundsException expected");
 
         // Assert --> (expected = IndexOutOfBoundsException.class)
@@ -97,10 +99,10 @@ public class TestMyArrayList {
     public void test_add_at_index_exception_low() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
-        list.add(-1, new Dummy("Out of bounds"));
+        list.add(-1, new Dummy("test"));
         fail("IndexOutOfBoundsException expected");
 
         // Assert --> (expected = IndexOutOfBoundsException.class)
@@ -123,13 +125,13 @@ public class TestMyArrayList {
     public void test_get() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         //Act
         Dummy d = (Dummy) list.get(3);
 
         //Assert "4" at index 3
-        assertEquals("4", d.getValue());
+        assertEquals("E index 3", d.getValue());
     }
 
     /**
@@ -139,7 +141,7 @@ public class TestMyArrayList {
     public void test_get_exception_high() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
         Dummy d = (Dummy) list.get(18);
@@ -155,7 +157,7 @@ public class TestMyArrayList {
     public void test_get_exception_low() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
         Dummy d = (Dummy) list.get(-1);
@@ -171,14 +173,13 @@ public class TestMyArrayList {
     public void test_set() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
         list.set(5, new Dummy("Updated 5 index"));
 
         // Assert
         assertEquals("Updated 5 index", ((Dummy) list.get(5)).getValue());
-        assertEquals("7", ((Dummy) list.get(6)).getValue());
     }
 
     /**
@@ -188,10 +189,10 @@ public class TestMyArrayList {
     public void test_set_exception_high() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
-        list.set(10, new Dummy("Out of bounds"));
+        list.set(10, new Dummy("test"));
         fail("IndexOutOfBoundsException expected");
 
         // Assert --> (expected = IndexOutOfBoundsException.class)
@@ -204,10 +205,10 @@ public class TestMyArrayList {
     public void test_set_exception_low() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         // Act
-        list.set(-1, new Dummy("Out of bounds"));
+        list.set(-1, new Dummy("test"));
         fail("IndexOutOfBoundsException expected");
 
         // Assert --> (expected = IndexOutOfBoundsException.class)
@@ -222,11 +223,11 @@ public class TestMyArrayList {
         MyArrayList list = new MyArrayList();
 
         // Act
-        initArrayWithSevenValues(list);
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list); // 8 values
+        initArrayWithValues(list); // 16 values
 
         // Assert
-        assertEquals(list.getListLength(), 15);
+        assertEquals(list.getListLength(), 10 * 150 / 100 * 150 / 100);
     }
 
     /**
@@ -236,13 +237,14 @@ public class TestMyArrayList {
     public void test_remove() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         //Act
         list.remove(4);
 
-        //Assert "7" at index 5
-        assertEquals("7", ((Dummy) list.get(5)).getValue());
+        //Assert
+        Dummy d = (Dummy) list.get(4);
+        assertEquals("A index 5", d.getValue());
     }
 
     /**
@@ -252,13 +254,30 @@ public class TestMyArrayList {
     public void test_clear() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         //Act
         list.clear();
 
         //Assert has been cleared
+        assertTrue(list.isEmpty());
         assertEquals(0, list.size());
+    }
+
+    /**
+     * Test size()
+     */
+    @Test
+    public void test_size() {
+        // Arrange
+        MyArrayList list = new MyArrayList();
+
+        // Act
+        list.add(new Dummy("1"));
+        list.add(new Dummy("2"));
+
+        // Assert
+        assertEquals(2, list.size());
     }
 
     /**
@@ -268,9 +287,10 @@ public class TestMyArrayList {
     public void test_isEmpty_true() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         //Act
+        list.remove(0);
         list.remove(0);
         list.remove(0);
         list.remove(0);
@@ -290,9 +310,10 @@ public class TestMyArrayList {
     public void test_isEmpty_false() {
         // Arrange
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
         //Act
+        list.remove(0);
         list.remove(0);
         list.remove(0);
         list.remove(0);
@@ -311,10 +332,14 @@ public class TestMyArrayList {
     public void test_contains_true() {
         // Arrange & Act
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
-        //Assert list contains Dummy("7")
-        assertTrue(list.contains(new Dummy("7")));
+        // Act
+        Dummy d = new Dummy("A index 5");
+        boolean isPresent = list.contains(d);
+
+        //Assert
+        assertTrue(isPresent);
     }
 
     /**
@@ -324,10 +349,14 @@ public class TestMyArrayList {
     public void test_contains_false() {
         // Arrange & Act
         MyArrayList list = new MyArrayList();
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
-        //Assert list does not contains Dummy("0")
-        assertFalse(list.contains(new Dummy("0")));
+        // Act
+        Dummy d = new Dummy("index 8");
+        boolean isPresent = list.contains(d);
+
+        //Assert
+        assertFalse(isPresent);
     }
 
     /**
@@ -339,12 +368,12 @@ public class TestMyArrayList {
         MyArrayList list = new MyArrayList();
 
         //Act
-        initArrayWithSevenValues(list);
-        list.add(new Dummy("7"));
-        list.add(new Dummy("7"));
+        initArrayWithValues(list);
+        list.add(new Dummy("New index 3"));
 
-        //Assert "7" at index 6
-        assertEquals(list.indexOf(new Dummy("7")), 6);
+        //Assert
+        Dummy d = new Dummy("New index 3");
+        assertEquals(list.indexOf(new Dummy("E index 3")), 3);
     }
 
     /**
@@ -356,26 +385,69 @@ public class TestMyArrayList {
         MyArrayList list = new MyArrayList();
 
         //Act
-        initArrayWithSevenValues(list);
+        initArrayWithValues(list);
 
-        //Assert 19 not found (-1)
-        assertEquals(list.indexOf(new Dummy("19")), -1);
+        //Assert
+        Dummy d = new Dummy("index 8");
+        assertEquals(list.indexOf(d), -1);
+    }
+
+    @Test
+    public void text_compareTo_smaller() {
+        // Arrange
+        MyArrayList list = new MyArrayList();
+        initArrayWithValues(list);
+
+        //Act
+        int comparison = list.get(1).compareTo(list.get(2)); // plus petit (B < G)
+
+        //Assert
+        assertTrue(comparison < 0);
+    }
+
+    @Test
+    public void text_compareTo_bigger() {
+        // Arrange
+        MyArrayList list = new MyArrayList();
+        initArrayWithValues(list);
+
+        //Act
+        int comparison = list.get(2).compareTo(list.get(1)); // plus grand (F > B)
+
+        //Assert
+        assertTrue(comparison > 0);
+    }
+
+    @Test
+    public void test_trifusion() {
+        // Arrange
+        MyArrayList list = new MyArrayList();
+        initArrayWithValues(list);
+
+        //Act
+        list.fusionSort();
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
     }
 
     /**
-     * initialises a given list with 7 values
+     * initialises a given list with values
      *
      * @param list the list to be filled in
      */
-    private void initArrayWithSevenValues(MyCollection list) {
+    private void initArrayWithValues(MyCollection list) {
 
-        list.add(new Dummy("1"));
-        list.add(new Dummy("2"));
-        list.add(new Dummy("3"));
-        list.add(new Dummy("4"));
-        list.add(new Dummy("5"));
-        list.add(new Dummy("6"));
-        list.add(new Dummy("7"));
+        list.add(new Dummy("F index 0"));
+        list.add(new Dummy("B index 1"));
+        list.add(new Dummy("G index 2"));
+        list.add(new Dummy("E index 3"));
+        list.add(new Dummy("C index 4"));
+        list.add(new Dummy("A index 5"));
+        list.add(new Dummy("D index 6"));
+        list.add(new Dummy("H index 7"));
     }
 
 }
