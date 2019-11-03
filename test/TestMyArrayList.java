@@ -431,6 +431,16 @@ public class TestMyArrayList {
             System.out.println(list.get(i));
         }
 
+        // Assert
+        assertEquals(list.indexOf(new Dummy("A index 5")), 0);
+        assertEquals(list.indexOf(new Dummy("B index 1")), 1);
+        assertEquals(list.indexOf(new Dummy("C index 4")), 2);
+        assertEquals(list.indexOf(new Dummy("D index 6")), 3);
+        assertEquals(list.indexOf(new Dummy("E index 3")), 4);
+        assertEquals(list.indexOf(new Dummy("F index 0")), 5);
+        assertEquals(list.indexOf(new Dummy("G index 2")), 6);
+        assertEquals(list.indexOf(new Dummy("H index 7")), 7);
+
     }
 
     /**
