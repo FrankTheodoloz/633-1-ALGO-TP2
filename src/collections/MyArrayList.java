@@ -250,8 +250,9 @@ public class MyArrayList implements MyCollection {
                 premier++;
             } else {
                 // sinon classement de l'élément premier2 avant le premier
-                list.add(premier, list.get(premier2));
+                Comparable temp = list.get(premier2);
                 list.remove(premier2);
+                list.add(premier, temp);
 
                 // mise à jour des index
                 premier++;
